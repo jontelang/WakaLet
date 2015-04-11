@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D4629C31AD990D400D14216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4629B61AD990D400D14216 /* AppDelegate.m */; };
+		4D4629C41AD990D400D14216 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629B81AD990D400D14216 /* Credits.rtf */; };
+		4D4629C51AD990D400D14216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629BA1AD990D400D14216 /* InfoPlist.strings */; };
+		4D4629C61AD990D400D14216 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629BC1AD990D400D14216 /* MainMenu.xib */; };
+		4D4629C71AD990D400D14216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4629BE1AD990D400D14216 /* main.m */; };
+		4D4629C81AD990D400D14216 /* menubaricon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629BF1AD990D400D14216 /* menubaricon.png */; };
+		4D4629C91AD990D400D14216 /* waka.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629C01AD990D400D14216 /* waka.png */; };
+		4D4629CA1AD990D400D14216 /* wakalet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629C11AD990D400D14216 /* wakalet-Info.plist */; };
+		4D4629D11AD990ED00D14216 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629CB1AD990ED00D14216 /* Credits.rtf */; };
+		4D4629D21AD990ED00D14216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629CD1AD990ED00D14216 /* InfoPlist.strings */; };
+		4D4629D31AD990ED00D14216 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629CF1AD990ED00D14216 /* MainMenu.xib */; };
+		FA0DC49716A2F38A00E72B66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0DC49616A2F38A00E72B66 /* Cocoa.framework */; };
+		FABDA2F716A303A700FA3399 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABDA2F616A303A700FA3399 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D4629B51AD990D400D14216 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WakaLet/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		4D4629B61AD990D400D14216 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WakaLet/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		4D4629B91AD990D400D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Credits.rtf; sourceTree = "<group>"; };
+		4D4629BB1AD990D400D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		4D4629BD1AD990D400D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
+		4D4629BE1AD990D400D14216 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WakaLet/main.m; sourceTree = SOURCE_ROOT; };
+		4D4629BF1AD990D400D14216 /* menubaricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubaricon.png; path = WakaLet/menubaricon.png; sourceTree = SOURCE_ROOT; };
+		4D4629C01AD990D400D14216 /* waka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = waka.png; path = WakaLet/waka.png; sourceTree = SOURCE_ROOT; };
+		4D4629C11AD990D400D14216 /* wakalet-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "wakalet-Info.plist"; path = "WakaLet/wakalet-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4D4629C21AD990D400D14216 /* wakalet-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "wakalet-Prefix.pch"; path = "WakaLet/wakalet-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		4D4629CC1AD990ED00D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = WakaLet/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		4D4629CE1AD990ED00D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = WakaLet/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		4D4629D01AD990ED00D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = WakaLet/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		FA0DC49216A2F38A00E72B66 /* wakalet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wakalet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0DC49616A2F38A00E72B66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FA0DC49916A2F38A00E72B66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		FA0DC49A16A2F38A00E72B66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FA0DC49B16A2F38A00E72B66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FABDA2F616A303A700FA3399 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA0DC48F16A2F38A00E72B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABDA2F716A303A700FA3399 /* QuartzCore.framework in Frameworks */,
+				FA0DC49716A2F38A00E72B66 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D4629B71AD990D400D14216 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				4D4629B81AD990D400D14216 /* Credits.rtf */,
+				4D4629BA1AD990D400D14216 /* InfoPlist.strings */,
+				4D4629BC1AD990D400D14216 /* MainMenu.xib */,
+			);
+			name = en.lproj;
+			path = WakaLet/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		FA0DC48716A2F38A00E72B66 = {
+			isa = PBXGroup;
+			children = (
+				FA0DC49C16A2F38A00E72B66 /* WakaLet */,
+				FA0DC49516A2F38A00E72B66 /* Frameworks */,
+				FA0DC49316A2F38A00E72B66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA0DC49316A2F38A00E72B66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA0DC49216A2F38A00E72B66 /* wakalet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA0DC49516A2F38A00E72B66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FABDA2F616A303A700FA3399 /* QuartzCore.framework */,
+				FA0DC49616A2F38A00E72B66 /* Cocoa.framework */,
+				FA0DC49816A2F38A00E72B66 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0DC49816A2F38A00E72B66 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA0DC49916A2F38A00E72B66 /* AppKit.framework */,
+				FA0DC49A16A2F38A00E72B66 /* CoreData.framework */,
+				FA0DC49B16A2F38A00E72B66 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		FA0DC49C16A2F38A00E72B66 /* WakaLet */ = {
+			isa = PBXGroup;
+			children = (
+				4D4629B51AD990D400D14216 /* AppDelegate.h */,
+				4D4629B61AD990D400D14216 /* AppDelegate.m */,
+				4D4629B71AD990D400D14216 /* en.lproj */,
+				4D4629BE1AD990D400D14216 /* main.m */,
+				4D4629BF1AD990D400D14216 /* menubaricon.png */,
+				4D4629C01AD990D400D14216 /* waka.png */,
+				4D4629C11AD990D400D14216 /* wakalet-Info.plist */,
+				4D4629C21AD990D400D14216 /* wakalet-Prefix.pch */,
+				FA0DC49D16A2F38A00E72B66 /* Supporting Files */,
+			);
+			name = WakaLet;
+			path = TextLet;
+			sourceTree = "<group>";
+		};
+		FA0DC49D16A2F38A00E72B66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D4629CB1AD990ED00D14216 /* Credits.rtf */,
+				4D4629CD1AD990ED00D14216 /* InfoPlist.strings */,
+				4D4629CF1AD990ED00D14216 /* MainMenu.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA0DC49116A2F38A00E72B66 /* wakalet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA0DC4B016A2F38A00E72B66 /* Build configuration list for PBXNativeTarget "wakalet" */;
+			buildPhases = (
+				FA0DC48E16A2F38A00E72B66 /* Sources */,
+				FA0DC48F16A2F38A00E72B66 /* Frameworks */,
+				FA0DC49016A2F38A00E72B66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wakalet;
+			productName = TextLet;
+			productReference = FA0DC49216A2F38A00E72B66 /* wakalet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA0DC48916A2F38A00E72B66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jonathan Winger Lang";
+			};
+			buildConfigurationList = FA0DC48C16A2F38A00E72B66 /* Build configuration list for PBXProject "wakalet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA0DC48716A2F38A00E72B66;
+			productRefGroup = FA0DC49316A2F38A00E72B66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA0DC49116A2F38A00E72B66 /* wakalet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA0DC49016A2F38A00E72B66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D4629C91AD990D400D14216 /* waka.png in Resources */,
+				4D4629D21AD990ED00D14216 /* InfoPlist.strings in Resources */,
+				4D4629C51AD990D400D14216 /* InfoPlist.strings in Resources */,
+				4D4629C81AD990D400D14216 /* menubaricon.png in Resources */,
+				4D4629C41AD990D400D14216 /* Credits.rtf in Resources */,
+				4D4629CA1AD990D400D14216 /* wakalet-Info.plist in Resources */,
+				4D4629D11AD990ED00D14216 /* Credits.rtf in Resources */,
+				4D4629C61AD990D400D14216 /* MainMenu.xib in Resources */,
+				4D4629D31AD990ED00D14216 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA0DC48E16A2F38A00E72B66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D4629C71AD990D400D14216 /* main.m in Sources */,
+				4D4629C31AD990D400D14216 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D4629B81AD990D400D14216 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4629B91AD990D400D14216 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4D4629BA1AD990D400D14216 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4629BB1AD990D400D14216 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4D4629BC1AD990D400D14216 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4629BD1AD990D400D14216 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4D4629CB1AD990ED00D14216 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4629CC1AD990ED00D14216 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4D4629CD1AD990ED00D14216 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4629CE1AD990ED00D14216 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4D4629CF1AD990ED00D14216 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D4629D01AD990ED00D14216 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA0DC4AE16A2F38A00E72B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA0DC4AF16A2F38A00E72B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA0DC4B116A2F38A00E72B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WakaLet/wakalet-Prefix.pch";
+				INFOPLIST_FILE = "WakaLet/wakalet-Info.plist";
+				PRODUCT_NAME = wakalet;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA0DC4B216A2F38A00E72B66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WakaLet/wakalet-Prefix.pch";
+				INFOPLIST_FILE = "WakaLet/wakalet-Info.plist";
+				PRODUCT_NAME = wakalet;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA0DC48C16A2F38A00E72B66 /* Build configuration list for PBXProject "wakalet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0DC4AE16A2F38A00E72B66 /* Debug */,
+				FA0DC4AF16A2F38A00E72B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA0DC4B016A2F38A00E72B66 /* Build configuration list for PBXNativeTarget "wakalet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0DC4B116A2F38A00E72B66 /* Debug */,
+				FA0DC4B216A2F38A00E72B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA0DC48916A2F38A00E72B66 /* Project object */;
+}
