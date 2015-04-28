@@ -68,9 +68,6 @@
             // Show possible errors
             if( connectionError != nil ){
                 [self addApiMenuWithTitle:connectionError.localizedDescription];
-                [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:connectionError.localizedDescription
-                                                               action:@selector(api)
-                                                        keyEquivalent:@""]];
             }
             
             // Else just try to build the menu
