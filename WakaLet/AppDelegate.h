@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "WLMenu.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate,NSMenuDelegate>
 {
     NSStatusItem *statusItem;
-    NSMenu *statusMenu;
+    WLMenu *statusMenu;
 }
 @end
