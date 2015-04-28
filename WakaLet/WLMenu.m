@@ -8,8 +8,6 @@
 
 #import "WLMenu.h"
 
-const NSInteger WLMenuQuitButtonTag = 159;
-
 @interface WLMenu ()
 
 @property (nonatomic, retain) NSMenuItem *quitItem;
@@ -23,8 +21,6 @@ const NSInteger WLMenuQuitButtonTag = 159;
     self = [super init];
     if (self) {
         self.quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
-        _quitItem.tag = WLMenuQuitButtonTag;
-        
         self.showQuitButton = YES;
     }
     return self;
@@ -32,11 +28,20 @@ const NSInteger WLMenuQuitButtonTag = 159;
 
 #pragma mark - 
 
+- (NSMenuItem *)addItemWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode
+{
+    NSMenuItem *newItem = [[NSMenuItem alloc] initWithTitle:aString action:aSelector keyEquivalent:charCode];
+    [self addItem:newItem];
+    return newItem;
+}
+
 
 - (void)addItem:(NSMenuItem *)newItem
 {
-    [super addItem:newItem];
-    [self updateQuitButton];
+    if (newItem) {
+        [super addItem:newItem];
+        [self updateQuitButton];
+    }
 }
 
 #pragma mark - Quit button
@@ -57,8 +62,10 @@ const NSInteger WLMenuQuitButtonTag = 159;
 
 - (void)addQuitButtonIfNeeded
 {
-    if (self.showQuitButton) {
-        [self insertItem:_quitItem atIndex:self.numberOfItems];
+    if (_quitItem) {
+        if (self.showQuitButton) {
+            [self insertItem:_quitItem atIndex:self.numberOfItems];
+        }
     }
 }
 
