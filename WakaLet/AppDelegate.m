@@ -21,7 +21,7 @@
     [statusItem setTitle:@"W"];
     //[statusItem setImage:[NSImage imageNamed:@"menubaricon.png"]];
     [statusItem setHighlightMode:YES];
-    statusMenu = [[NSMenu alloc] init];
+    statusMenu = [[WLMenu alloc] init];
     [statusMenu setDelegate:self];
     [statusItem setMenu:statusMenu];
     [self checkAPIAndBuildMenu];
