@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D2F75951AFA5DF6000C9923 /* NSMenuItem+Equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F75941AFA5DF6000C9923 /* NSMenuItem+Equal.m */; };
+		4D2F75991AFA5F60000C9923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2F75981AFA5F60000C9923 /* Images.xcassets */; };
 		4D4629C31AD990D400D14216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4629B61AD990D400D14216 /* AppDelegate.m */; };
 		4D4629C41AD990D400D14216 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629B81AD990D400D14216 /* Credits.rtf */; };
 		4D4629C51AD990D400D14216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629BA1AD990D400D14216 /* InfoPlist.strings */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		4D2F75931AFA5DF6000C9923 /* NSMenuItem+Equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMenuItem+Equal.h"; path = "WakaLet/NSMenuItem+Equal.h"; sourceTree = SOURCE_ROOT; };
 		4D2F75941AFA5DF6000C9923 /* NSMenuItem+Equal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMenuItem+Equal.m"; path = "WakaLet/NSMenuItem+Equal.m"; sourceTree = SOURCE_ROOT; };
+		4D2F75981AFA5F60000C9923 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = wakalet/Images.xcassets; sourceTree = "<group>"; };
 		4D4629B51AD990D400D14216 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WakaLet/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		4D4629B61AD990D400D14216 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WakaLet/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		4D4629B91AD990D400D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Credits.rtf; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		FA0DC48716A2F38A00E72B66 = {
 			isa = PBXGroup;
 			children = (
+				4D2F75981AFA5F60000C9923 /* Images.xcassets */,
 				FA0DC49C16A2F38A00E72B66 /* WakaLet */,
 				FA0DC49516A2F38A00E72B66 /* Frameworks */,
 				FA0DC49316A2F38A00E72B66 /* Products */,
@@ -196,6 +199,7 @@
 				4D4629C91AD990D400D14216 /* waka.png in Resources */,
 				4D4629D21AD990ED00D14216 /* InfoPlist.strings in Resources */,
 				4D4629C51AD990D400D14216 /* InfoPlist.strings in Resources */,
+				4D2F75991AFA5F60000C9923 /* Images.xcassets in Resources */,
 				4D4629C81AD990D400D14216 /* menubaricon.png in Resources */,
 				4D4629C41AD990D400D14216 /* Credits.rtf in Resources */,
 				4D4629CA1AD990D400D14216 /* wakalet-Info.plist in Resources */,
@@ -329,6 +333,7 @@
 		FA0DC4B116A2F38A00E72B66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WakaLet/wakalet-Prefix.pch";
@@ -341,6 +346,7 @@
 		FA0DC4B216A2F38A00E72B66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WakaLet/wakalet-Prefix.pch";
