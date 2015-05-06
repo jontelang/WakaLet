@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        self.quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
+        self.quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@"q"];
         self.showQuitButton = YES;
     }
     return self;
