@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+#import "NSMenuItem+Equal.h"
 
 @implementation AppDelegate
 
@@ -34,7 +35,7 @@
     
     // If there is no key though, just show the add-API-key entry
     if( api_key == nil ){
-        [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(api) keyEquivalent:@"a"]];
+        [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(api) keyEquivalent:@"a"]];
     }
     
     // If there is one, initiate the request
@@ -56,7 +57,7 @@
         
         // Let the user know we are refreshing
         [statusMenu removeAllItems];
-        [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:@"Refreshing.." action:nil keyEquivalent:@""]];
+        [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Refreshing.." action:nil keyEquivalent:@""]];
         
         // Record the date of the refresh/api get
         [[NSUserDefaults standardUserDefaults] setValue:[NSDate date]
@@ -67,7 +68,7 @@
             
             // Show possible errors
             if( connectionError != nil ){
-                [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:connectionError.localizedDescription
+                [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:connectionError.localizedDescription
                                                                action:@selector(api)
                                                         keyEquivalent:@""]];
             }
@@ -85,7 +86,7 @@
                 
                 // Otherwise let's show the error somehow
                 else{
-                    [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:err.localizedDescription
+                    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:err.localizedDescription
                                                                    action:@selector(api)
                                                             keyEquivalent:@""]];
                 }
@@ -210,10 +211,29 @@
     [statusMenu addItem:timeSinceRefreshItem];
     
     // Add more various stuffs
-    [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:@"Refresh now" action:@selector(checkAPIAndBuildMenu) keyEquivalent:@"r"]];
-    [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:@"Dashboard" action:@selector(dashboard) keyEquivalent:@"d"]];
-    [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(api) keyEquivalent:@"a"]];
+    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Refresh now" action:@selector(checkAPIAndBuildMenu) keyEquivalent:@"r"]];
+    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Dashboard" action:@selector(dashboard) keyEquivalent:@"d"]];
+    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(api) keyEquivalent:@"a"]];
 
+}
+
+#pragma mark - 
+
+- (BOOL)checkIsItemInMenu:(NSMenuItem *)checkItem
+{
+    for (NSMenuItem *item in statusMenu.itemArray) {
+        if ([item isSameWithMenuItem:checkItem]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (void)addItemInMenuIfNeeded:(NSMenuItem *)menuItem
+{
+    if (NO == [self checkIsItemInMenu:menuItem]) {
+        [statusMenu addItem:menuItem];
+    }
 }
 
 #pragma mark Clicky methods
