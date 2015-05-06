@@ -67,9 +67,7 @@
             
             // Show possible errors
             if( connectionError != nil ){
-                [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:connectionError.localizedDescription
-                                                               action:@selector(api)
-                                                        keyEquivalent:@""]];
+                [self addApiMenuWithTitle:connectionError.localizedDescription];
             }
             
             // Else just try to build the menu
@@ -79,19 +77,24 @@
                 NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&err];
                 
                 // If there is no error, build the wakalet
-                if( err == nil ){
-                    [self buildMenuWithData:dict];
+                if( err == nil ) {
+                    [self performSelectorOnMainThread:@selector(buildMenuWithData:) withObject:dict waitUntilDone:NO];
                 }
                 
                 // Otherwise let's show the error somehow
                 else{
-                    [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:err.localizedDescription
-                                                                   action:@selector(api)
-                                                            keyEquivalent:@""]];
+                    [self addApiMenuWithTitle:err.localizedDescription];
                 }
             }
         }];
     }
+}
+
+- (void)addApiMenuWithTitle:(NSString *)title
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:title action:@selector(api) keyEquivalent:@""]];
+    });
 }
 
 -(void)api
