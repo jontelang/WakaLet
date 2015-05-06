@@ -16,10 +16,6 @@
 		4D4629C71AD990D400D14216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4629BE1AD990D400D14216 /* main.m */; };
 		4D4629C81AD990D400D14216 /* menubaricon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629BF1AD990D400D14216 /* menubaricon.png */; };
 		4D4629C91AD990D400D14216 /* waka.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629C01AD990D400D14216 /* waka.png */; };
-		4D4629CA1AD990D400D14216 /* wakalet-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629C11AD990D400D14216 /* wakalet-Info.plist */; };
-		4D4629D11AD990ED00D14216 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629CB1AD990ED00D14216 /* Credits.rtf */; };
-		4D4629D21AD990ED00D14216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629CD1AD990ED00D14216 /* InfoPlist.strings */; };
-		4D4629D31AD990ED00D14216 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629CF1AD990ED00D14216 /* MainMenu.xib */; };
 		52E329551AEFE17700D1D671 /* WLMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E329541AEFE17700D1D671 /* WLMenu.m */; };
 		FA0DC49716A2F38A00E72B66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0DC49616A2F38A00E72B66 /* Cocoa.framework */; };
 		FABDA2F716A303A700FA3399 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABDA2F616A303A700FA3399 /* QuartzCore.framework */; };
@@ -171,7 +167,7 @@
 		FA0DC48916A2F38A00E72B66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Jonathan Winger Lang";
 			};
 			buildConfigurationList = FA0DC48C16A2F38A00E72B66 /* Build configuration list for PBXProject "wakalet" */;
@@ -197,15 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4629C91AD990D400D14216 /* waka.png in Resources */,
-				4D4629D21AD990ED00D14216 /* InfoPlist.strings in Resources */,
 				4D4629C51AD990D400D14216 /* InfoPlist.strings in Resources */,
 				4D2F75991AFA5F60000C9923 /* Images.xcassets in Resources */,
 				4D4629C81AD990D400D14216 /* menubaricon.png in Resources */,
 				4D4629C41AD990D400D14216 /* Credits.rtf in Resources */,
-				4D4629CA1AD990D400D14216 /* wakalet-Info.plist in Resources */,
-				4D4629D11AD990ED00D14216 /* Credits.rtf in Resources */,
 				4D4629C61AD990D400D14216 /* MainMenu.xib in Resources */,
-				4D4629D31AD990ED00D14216 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +273,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -311,7 +302,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
