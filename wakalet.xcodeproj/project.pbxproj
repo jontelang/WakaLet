@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2F75951AFA5DF6000C9923 /* NSMenuItem+Equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F75941AFA5DF6000C9923 /* NSMenuItem+Equal.m */; };
 		4D4629C31AD990D400D14216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4629B61AD990D400D14216 /* AppDelegate.m */; };
 		4D4629C41AD990D400D14216 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629B81AD990D400D14216 /* Credits.rtf */; };
 		4D4629C51AD990D400D14216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D4629BA1AD990D400D14216 /* InfoPlist.strings */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D2F75931AFA5DF6000C9923 /* NSMenuItem+Equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMenuItem+Equal.h"; path = "WakaLet/NSMenuItem+Equal.h"; sourceTree = SOURCE_ROOT; };
+		4D2F75941AFA5DF6000C9923 /* NSMenuItem+Equal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMenuItem+Equal.m"; path = "WakaLet/NSMenuItem+Equal.m"; sourceTree = SOURCE_ROOT; };
 		4D4629B51AD990D400D14216 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WakaLet/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		4D4629B61AD990D400D14216 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WakaLet/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		4D4629B91AD990D400D14216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Credits.rtf; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 		FA0DC49C16A2F38A00E72B66 /* WakaLet */ = {
 			isa = PBXGroup;
 			children = (
+				4D2F75931AFA5DF6000C9923 /* NSMenuItem+Equal.h */,
+				4D2F75941AFA5DF6000C9923 /* NSMenuItem+Equal.m */,
 				52E329531AEFE17700D1D671 /* WLMenu.h */,
 				52E329541AEFE17700D1D671 /* WLMenu.m */,
 				4D4629B51AD990D400D14216 /* AppDelegate.h */,
@@ -208,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4629C71AD990D400D14216 /* main.m in Sources */,
+				4D2F75951AFA5DF6000C9923 /* NSMenuItem+Equal.m in Sources */,
 				52E329551AEFE17700D1D671 /* WLMenu.m in Sources */,
 				4D4629C31AD990D400D14216 /* AppDelegate.m in Sources */,
 			);
