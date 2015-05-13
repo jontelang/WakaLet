@@ -188,6 +188,7 @@
                 NSString *time  = [projectObj valueForKey:@"digital"];
                 name = [NSString stringWithFormat:@"  %@ (%@)", name, time];
                 NSMenuItem *item = [[NSMenuItem alloc] init];
+                item.enabled = NO;
                 [item setTitle:name];
                 [item setTag:i];
                 [item setKeyEquivalent:@""];
@@ -199,7 +200,9 @@
         
         // Otherwise just show that there is no data for the date
         else{
-            [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:@"  No data" action:nil keyEquivalent:@""]];
+            NSMenuItem *noDataItem = [[NSMenuItem alloc] initWithTitle:@"  No data" action:nil keyEquivalent:@""];
+            noDataItem.enabled = NO;
+            [statusMenu addItem:noDataItem];
         }
         
         //
@@ -214,6 +217,7 @@
     // Calculate the last refresh time
     NSMenuItem *timeSinceRefreshItem = [[NSMenuItem alloc] initWithTitle:[self getTimeSinceRefreshTitle]
                                                                   action:nil keyEquivalent:@""];
+    timeSinceRefreshItem.enabled = NO;
     timeSinceRefreshItem.tag = 1337;
     [statusMenu addItem:timeSinceRefreshItem];
     
