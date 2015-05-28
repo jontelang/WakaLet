@@ -169,12 +169,13 @@
         NSDictionary *rangeObj = [dataObj objectForKey:@"range"];
         NSString* date = [rangeObj valueForKey:@"date"];
         NSString* date_human = [rangeObj valueForKey:@"date_human"];
+        NSString* grand_total_text = [grandObj valueForKey:@"text"];
         
         // Each item is clickable, we store the url to the date in it's tooltip
         NSMenuItem *dateItem = [[NSMenuItem alloc] initWithTitle:date_human.capitalizedString
                                                           action:@selector(open:)
                                                    keyEquivalent:@""];
-        dateItem.toolTip = [NSString stringWithFormat:@"https://wakatime.com/dashboard/day?date=%@",date];
+        dateItem.toolTip = [NSString stringWithFormat:@"http://www.wakatime.com/dashboard/day?date=%@",date];
         [statusMenu addItem:dateItem];
         
         // We only grab more data if there is data recorded
@@ -194,6 +195,7 @@
                 [item setKeyEquivalent:@""];
                 [item setAction:nil];
                 [item setImage:nil];
+                item.toolTip = [NSString stringWithFormat:@"Total for day: %@",grand_total_text];
                 [statusMenu addItem:item];
             }
         }
