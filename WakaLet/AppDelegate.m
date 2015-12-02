@@ -12,12 +12,11 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+-(void)applicationDidFinishLaunching:(NSNotification *)aNotification{
     // Insert code here to initialize your application
 }
 
--(void) awakeFromNib{
+-(void)awakeFromNib{
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setTitle:@"W"];
     //[statusItem setImage:[NSImage imageNamed:@"menubaricon.png"]];
@@ -28,8 +27,7 @@
     [self checkAPIAndBuildMenu];
 }
 
--(void)checkAPIAndBuildMenu
-{
+-(void)checkAPIAndBuildMenu{
     // Get the manually set API key
     NSString *api_key = [[NSUserDefaults standardUserDefaults] valueForKey:@"api_key"];
     
@@ -64,7 +62,10 @@
                                                  forKey:@"refresh"];
         
         // Go go go
-        [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //NSLog(@"Request: %@", request);
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[[NSOperationQueue alloc] init]
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
             
             // Show possible errors
             if( connectionError != nil ){
@@ -95,15 +96,13 @@
     }
 }
 
-- (void)addApiMenuWithTitle:(NSString *)title
-{
+-(void)addApiMenuWithTitle:(NSString *)title{
     dispatch_async(dispatch_get_main_queue(), ^{
         [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:title action:@selector(api) keyEquivalent:@""]];
     });
 }
 
--(void)api
-{
+-(void)api{
     NSString *old_apo_key = [[NSUserDefaults standardUserDefaults] valueForKey:@"api_key"];
     NSString *api_key = [self input:@"Enter your API key" defaultValue:old_apo_key==nil?@"":old_apo_key];
     
@@ -115,7 +114,7 @@
     [self checkAPIAndBuildMenu];
 }
 
-- (NSString *)input: (NSString *)prompt defaultValue: (NSString *)defaultValue {
+-(NSString*)input:(NSString *)prompt defaultValue:(NSString*)defaultValue{
     NSAlert *alert = [NSAlert alertWithMessageText:prompt
                                      defaultButton:@"OK"
                                    alternateButton:@"Cancel"
@@ -138,14 +137,12 @@
     }
 }
 
--(void)menuWillOpen:(NSMenu *)menu
-{
+-(void)menuWillOpen:(NSMenu *)menu{
     NSMenuItem* timeSinceRefreshItem = [menu itemWithTag:1337];
     timeSinceRefreshItem.title = [self getTimeSinceRefreshTitle];
 }
 
--(void)buildMenuWithData:(NSDictionary*)dict
-{
+-(void)buildMenuWithData:(NSDictionary*)dict{
     //NSLog(@"%@",dict);
     
     // Remove any existing menu
@@ -172,7 +169,7 @@
         NSString* grand_total_text = [grandObj valueForKey:@"text"];
         
         // Each item is clickable, we store the url to the date in it's tooltip
-        NSMenuItem *dateItem = [[NSMenuItem alloc] initWithTitle:date_human.capitalizedString
+        NSMenuItem *dateItem = [[NSMenuItem alloc] initWithTitle:date_human
                                                           action:@selector(open:)
                                                    keyEquivalent:@""];
         dateItem.toolTip = [NSString stringWithFormat:@"http://www.wakatime.com/dashboard/day?date=%@",date];
@@ -232,8 +229,7 @@
 
 #pragma mark - 
 
-- (BOOL)checkIsItemInMenu:(NSMenuItem *)checkItem
-{
+-(BOOL)checkIsItemInMenu:(NSMenuItem *)checkItem{
     for (NSMenuItem *item in statusMenu.itemArray) {
         if ([item isSameWithMenuItem:checkItem]) {
             return YES;
@@ -242,8 +238,7 @@
     return NO;
 }
 
-- (void)addItemInMenuIfNeeded:(NSMenuItem *)menuItem
-{
+-(void)addItemInMenuIfNeeded:(NSMenuItem *)menuItem{
     if (NO == [self checkIsItemInMenu:menuItem]) {
         [statusMenu addItem:menuItem];
     }
@@ -251,18 +246,15 @@
 
 #pragma mark Clicky methods
 
--(void)open:(NSMenuItem*)menuItem
-{
+-(void)open:(NSMenuItem*)menuItem{
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:menuItem.toolTip]];
 }
 
--(void)dashboard
-{
+-(void)dashboard{
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.wakatime.com/dashboard"]];
 }
 
--(NSString*)getTimeSinceRefreshTitle
-{
+-(NSString*)getTimeSinceRefreshTitle{
     NSDate *refreshDate = (NSDate*)[[NSUserDefaults standardUserDefaults] valueForKey:@"refresh"];
     int lastRefreshTimeStamp = (int)[refreshDate timeIntervalSince1970];
     int currentTimeStamp = (int)[[NSDate date] timeIntervalSince1970];
