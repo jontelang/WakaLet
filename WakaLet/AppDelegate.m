@@ -165,7 +165,7 @@
         NSInteger *totalseconds = [[grandObj valueForKey:@"total_seconds"] integerValue];
         NSDictionary *rangeObj = [dataObj objectForKey:@"range"];
         NSString* date = [rangeObj valueForKey:@"date"];
-        NSString* date_human = [rangeObj valueForKey:@"date_human"];
+        NSString* date_human = [rangeObj valueForKey:@"text"];
         NSString* grand_total_text = [grandObj valueForKey:@"text"];
         
         // Each item is clickable, we store the url to the date in it's tooltip
