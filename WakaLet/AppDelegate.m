@@ -33,7 +33,7 @@
     
     // If there is no key though, just show the add-API-key entry
     if( api_key == nil ){
-        [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(api) keyEquivalent:@"a"]];
+        [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(openSetApi) keyEquivalent:@"a"]];
     }
     
     // If there is one, initiate the request
@@ -70,7 +70,7 @@
             // Show possible errors
             if( connectionError != nil ){
                 [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:connectionError.localizedDescription
-                                                               action:@selector(api)
+                                                               action:@selector(openSetApi)
                                                         keyEquivalent:@""]];
             }
             
@@ -88,7 +88,7 @@
                 // Otherwise let's show the error somehow
                 else{
                     [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:err.localizedDescription
-                                                                   action:@selector(api)
+                                                                   action:@selector(openSetApi)
                                                             keyEquivalent:@""]];
                 }
             }
@@ -98,11 +98,11 @@
 
 -(void)addApiMenuWithTitle:(NSString *)title{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:title action:@selector(api) keyEquivalent:@""]];
+        [statusMenu addItem:[[NSMenuItem alloc] initWithTitle:title action:@selector(openSetApi) keyEquivalent:@""]];
     });
 }
 
--(void)api{
+-(void)openSetApi{
     NSString *old_apo_key = [[NSUserDefaults standardUserDefaults] valueForKey:@"api_key"];
     NSString *api_key = [self input:@"Enter your API key" defaultValue:old_apo_key==nil?@"":old_apo_key];
     
@@ -170,7 +170,7 @@
         
         // Each item is clickable, we store the url to the date in it's tooltip
         NSMenuItem *dateItem = [[NSMenuItem alloc] initWithTitle:date_human
-                                                          action:@selector(open:)
+                                                          action:@selector(openUrlFromMenuItemTooltip:)
                                                    keyEquivalent:@""];
         dateItem.toolTip = [NSString stringWithFormat:@"http://www.wakatime.com/dashboard/day?date=%@",date];
         [statusMenu addItem:dateItem];
@@ -222,8 +222,8 @@
     
     // Add more various stuffs
     [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Refresh now" action:@selector(checkAPIAndBuildMenu) keyEquivalent:@"r"]];
-    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Dashboard" action:@selector(dashboard) keyEquivalent:@"d"]];
-    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(api) keyEquivalent:@"a"]];
+    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Dashboard" action:@selector(openWakaletDashboard) keyEquivalent:@"d"]];
+    [self addItemInMenuIfNeeded:[[NSMenuItem alloc] initWithTitle:@"Set API key" action:@selector(openSetApi) keyEquivalent:@"a"]];
 
 }
 
@@ -244,13 +244,14 @@
     }
 }
 
+
 #pragma mark Clicky methods
 
--(void)open:(NSMenuItem*)menuItem{
+-(void)openUrlFromMenuItemTooltip:(NSMenuItem*)menuItem{
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:menuItem.toolTip]];
 }
 
--(void)dashboard{
+-(void)openWakaletDashboard{
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.wakatime.com/dashboard"]];
 }
 
